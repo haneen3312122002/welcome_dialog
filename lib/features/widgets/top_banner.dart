@@ -55,7 +55,7 @@ class TopBanner extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Tajawal',
                   fontWeight: FontWeight.w700,
-                  fontSize: 24.sp,
+                  fontSize: 20.sp,
                   height: 32 / 24,
                   letterSpacing: 0,
                   color: const Color(0xFFFFFFFF),
