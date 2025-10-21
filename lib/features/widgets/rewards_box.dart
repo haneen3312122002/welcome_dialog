@@ -60,12 +60,12 @@ class RewardsBox extends StatelessWidget {
               SizedBox(height: 4.h),
               SizedBox(
                 width: 252.w,
-                height: 20.h,
+                height: 30.h,
                 child: RichText(
                   text: TextSpan(
                     style: TextStyle(
                       fontFamily: 'Tajawal',
-                      fontSize: 14.sp,
+                      fontSize: 13.5.sp,
                       height: 20 / 14,
                       letterSpacing: 0,
                       color: Colors.black,
