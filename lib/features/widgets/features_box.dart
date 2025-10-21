@@ -20,7 +20,19 @@ class FeaturesBox extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          leading,
+          Container(
+            child: leading,
+            width: 32.w,
+            height: 32.h,
+            decoration: BoxDecoration(
+              color: Color(0xFFF0F9F8), // لون الخلفية
+              shape: BoxShape.circle, // لجعلها دائرة
+              border: Border.all(
+                color: Color(0xFFE5E7EB), // لون الحدود
+                width: 1, // سمك الحدود (تقدر تغيّريه)
+              ),
+            ),
+          ),
           SizedBox(width: 12.w),
           Expanded(
             child: Column(

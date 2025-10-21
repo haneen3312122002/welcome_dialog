@@ -5,6 +5,7 @@ import 'package:aumet_welcome_dialog/features/widgets/rewards_box.dart';
 import 'package:aumet_welcome_dialog/features/widgets/top_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -30,12 +31,23 @@ class WelcomePage extends StatelessWidget {
                 child: const Icon(Icons.close, color: Colors.white, size: 20),
               ),
             ),
-            centerImage: Container(
-              decoration: BoxDecoration(
-                color: const Color(0x33FFFFFF),
-                borderRadius: BorderRadius.circular(9999),
+            centerImage: ClipOval(
+              child: Container(
+                width: 32.w, // نفس حجم الدائرة اللي برا
+                height: 32.h,
+                decoration: const BoxDecoration(
+                  color: Color(0x33FFFFFF),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    'assets/aumet.svg',
+                    width: 44.52.w,
+                    height: 44.60.h,
+                    fit: BoxFit.contain, // يحافظ على تناسب الصورة بدون تقطيع
+                  ),
+                ),
               ),
-              child: const Icon(Icons.home, color: Colors.white, size: 40),
             ),
           ),
           SizedBox(height: 24.h),
@@ -67,26 +79,46 @@ class WelcomePage extends StatelessWidget {
                 FeaturesBox(
                   title: "Marketplace",
                   subtitle: "Buy directly from verified suppliers",
-                  leading: Icon(Icons.home, size: 28, color: Colors.blueAccent),
+                  leading: SvgPicture.asset(
+                    'assets/marketplace.svg',
+                    width: 15.75.w, // optional
+                    height: 14.h, // optional
+                    //fit: BoxFit.contain, // optional
+                  ),
                 ),
                 SizedBox(height: 16.h),
                 FeaturesBox(
                   title: "Pharmacy to Pharmacy - P2P",
                   subtitle: "Sell to 3000+ pharmacies instantly",
-                  leading: Icon(Icons.home, size: 28, color: Colors.blueAccent),
+                  leading: SvgPicture.asset(
+                    'assets/arrow.svg',
+                    width: 12.7.w, // optional
+                    height: 14.h, // optional
+                    //fit: BoxFit.contain, // optional
+                  ),
                 ),
                 SizedBox(height: 16.h),
                 FeaturesBox(
                   title: "Pharmacy Management System",
                   subtitle: "Run your entire system (POS, inventory, etc)",
-                  leading: Icon(Icons.home, size: 28, color: Colors.blueAccent),
+                  leading: SvgPicture.asset(
+                    'assets/set.svg',
+                    width: 17.5.w, // optional
+                    height: 14.h, // optional
+                    //fit: BoxFit.contain, // optional
+                  ),
                 ),
                 SizedBox(height: 24.h),
               ],
             ),
           ),
           RewardsBox(
-            icon: Icon(Icons.home, size: 24.sp, color: Colors.blue),
+            icon: SvgPicture.asset(
+              'assets/reward.svg',
+              width: 16.w, // optional
+              height: 16.h, // optional
+              //fit: BoxFit.contain, // optional
+            ),
             title: "Earn Exclusive Rewards",
             textSpans: [
               TextSpan(text: "Earn "),

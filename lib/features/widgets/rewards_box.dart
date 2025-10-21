@@ -19,7 +19,7 @@ class RewardsBox extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.w),
       child: Container(
         width: 295.w,
-        height: 80.h,
+        height: 90.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.r),
           gradient: const LinearGradient(
@@ -35,23 +35,28 @@ class RewardsBox extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment
+                    .center, // لجعل الأيقونة في المنتصف عموديًا
                 children: [
                   icon,
-                  SizedBox(width: 2.w),
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontFamily: 'Tajawal',
-                      fontWeight: FontWeight.w700,
-                      fontSize: 14.sp,
-                      height: 20 / 14,
-                      letterSpacing: 0,
-                      color: const Color(0xFF1A2E35),
+                  SizedBox(width: 8.w), // مسافة أكبر بين الأيقونة والنص
+                  Expanded(
+                    // للتأكد أن النص لا يقطع
+                    child: Text(
+                      title,
+                      style: TextStyle(
+                        fontFamily: 'Tajawal',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14.sp,
+                        height: 20 / 14,
+                        letterSpacing: 0,
+                        color: const Color(0xFF1A2E35),
+                      ),
                     ),
                   ),
                 ],
               ),
+
               SizedBox(height: 4.h),
               SizedBox(
                 width: 252.w,
