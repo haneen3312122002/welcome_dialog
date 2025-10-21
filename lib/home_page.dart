@@ -1,4 +1,4 @@
-import 'package:aumet_welcome_dialog/services.dart';
+import 'package:aumet_welcome_dialog/functions.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

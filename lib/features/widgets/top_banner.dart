@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TopBanner extends StatelessWidget {
-  final String title; // Text at the bottom
-  final Widget? closeButton; // optional close button
-  final Widget? centerImage; // optional image or icon in the middle
+  final String title;
+  final Widget? closeButton;
+  final Widget? centerImage;
   final double width;
   final double height;
 
@@ -23,7 +23,6 @@ class TopBanner extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Stack(
         children: [
-          // Main gradient container
           Container(
             width: width.w,
             height: height.h,
@@ -36,20 +35,14 @@ class TopBanner extends StatelessWidget {
               border: Border.all(color: const Color(0xFFE5E7EB), width: 1),
             ),
           ),
-
-          // Optional close button
           if (closeButton != null)
             Positioned(top: 8.h, right: 8.w, child: closeButton!),
-
-          // Optional center image/icon
           if (centerImage != null)
             Positioned(
               top: 32.h,
-              left: (width / 2 - 40).w, // centered horizontally
+              left: (width / 2 - 40).w,
               child: SizedBox(width: 80.w, height: 80.h, child: centerImage!),
             ),
-
-          // Title text at the bottom
           Positioned(
             top: 128.h,
             left: 29.91.w,

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RewardsBox extends StatelessWidget {
-  final String title; // first bold text
-  final List<TextSpan> textSpans; // rich text spans
-  final Widget icon; // icon or image
+  final String title;
+  final List<TextSpan> textSpans;
+  final Widget icon;
 
   const RewardsBox({
     super.key,
@@ -52,7 +52,7 @@ class RewardsBox extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 8.h),
+              SizedBox(height: 4.h),
               SizedBox(
                 width: 252.w,
                 height: 20.h,

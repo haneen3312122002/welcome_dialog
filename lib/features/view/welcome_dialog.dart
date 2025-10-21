@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:aumet_welcome_dialog/features/widgets/features_box.dart';
-import 'package:aumet_welcome_dialog/features/widgets/rewords_ox.dart';
+import 'package:aumet_welcome_dialog/features/widgets/rewards_box.dart';
 import 'package:aumet_welcome_dialog/features/widgets/top_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
